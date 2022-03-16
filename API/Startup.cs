@@ -1,5 +1,7 @@
 
 using Data.ApplicationContext;
+using Hamnava.Core.Repository.Interfaces;
+using Hamnava.Core.Repository.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -34,6 +36,9 @@ namespace API
             {
                 x.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
             });
+
+            // for implementing services
+            services.AddScoped<IProductRepository, ProductRepository>();
 
 
             services.AddControllers();
