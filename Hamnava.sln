@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API", "API\API.csproj", "{A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hamnava.Core", "Hamnava.Core\Hamnava.Core.csproj", "{F5BEDBF6-3FF2-457C-BB59-1F2F1E278809}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hamnava.DataLayer", "Hamnava.DataLayer\Hamnava.DataLayer.csproj", "{315F9912-B5EE-4ADA-A512-3AE06A01A024}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{83D67F20-41D3-4158-8132-19CEEED3F1CB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{F5BEDBF6-3FF2-457C-BB59-1F2F1E278809}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F5BEDBF6-3FF2-457C-BB59-1F2F1E278809}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F5BEDBF6-3FF2-457C-BB59-1F2F1E278809}.Release|Any CPU.Build.0 = Release|Any CPU
-		{315F9912-B5EE-4ADA-A512-3AE06A01A024}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{315F9912-B5EE-4ADA-A512-3AE06A01A024}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{315F9912-B5EE-4ADA-A512-3AE06A01A024}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{315F9912-B5EE-4ADA-A512-3AE06A01A024}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83D67F20-41D3-4158-8132-19CEEED3F1CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83D67F20-41D3-4158-8132-19CEEED3F1CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83D67F20-41D3-4158-8132-19CEEED3F1CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83D67F20-41D3-4158-8132-19CEEED3F1CB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
