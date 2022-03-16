@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "API\API.csproj", "{A9C8A1C7-75C2-47A6-BA3C-15FE7314B722}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API", "API\API.csproj", "{A9C8A1C7-75C2-47A6-BA3C-15FE7314B722}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hamnava.Core", "Hamnava.Core\Hamnava.Core.csproj", "{F5BEDBF6-3FF2-457C-BB59-1F2F1E278809}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hamnava.DataLayer", "Hamnava.DataLayer\Hamnava.DataLayer.csproj", "{315F9912-B5EE-4ADA-A512-3AE06A01A024}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{A9C8A1C7-75C2-47A6-BA3C-15FE7314B722}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9C8A1C7-75C2-47A6-BA3C-15FE7314B722}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A9C8A1C7-75C2-47A6-BA3C-15FE7314B722}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5BEDBF6-3FF2-457C-BB59-1F2F1E278809}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5BEDBF6-3FF2-457C-BB59-1F2F1E278809}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5BEDBF6-3FF2-457C-BB59-1F2F1E278809}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5BEDBF6-3FF2-457C-BB59-1F2F1E278809}.Release|Any CPU.Build.0 = Release|Any CPU
+		{315F9912-B5EE-4ADA-A512-3AE06A01A024}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{315F9912-B5EE-4ADA-A512-3AE06A01A024}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{315F9912-B5EE-4ADA-A512-3AE06A01A024}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{315F9912-B5EE-4ADA-A512-3AE06A01A024}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
