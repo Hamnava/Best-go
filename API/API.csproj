@@ -5,6 +5,20 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="SeedData\brands.json" />
+    <Content Remove="SeedData\delivery.json" />
+    <Content Remove="SeedData\products.json" />
+    <Content Remove="SeedData\types.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="SeedData\brands.json" />
+    <None Include="SeedData\delivery.json" />
+    <None Include="SeedData\products.json" />
+    <None Include="SeedData\types.json" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer.Design" Version="1.1.6" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.0">
