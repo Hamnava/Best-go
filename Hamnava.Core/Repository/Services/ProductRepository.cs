@@ -22,9 +22,37 @@ namespace Hamnava.Core.Repository.Services
             return await _context.Products.ToListAsync();
         }
 
+
         public async Task<Product> GetProductByIdAsync(int id)
         {
             return await _context.Products.FindAsync(id);
         }
+
+        #region ProdcutBrand
+        public async Task<IReadOnlyList<ProductBrand>> GetAllProductBrandsAsync()
+        {
+            return await _context.ProductBrands.ToListAsync();
+        }
+
+        public async Task<ProductBrand> GetProductBrandByIdAsync(int id)
+        {
+            return await _context.ProductBrands.FindAsync(id);
+        }
+
+        #endregion
+
+
+        #region ProductType
+        public async Task<ProductType> GetProductTypeByIdAsync(int id)
+        {
+            return await _context.ProductTypes.FindAsync(id);
+        }
+
+        public async Task<IReadOnlyList<ProductType>> GetAllProductTypesAsync()
+        {
+            return await _context.ProductTypes.ToListAsync();
+        }
+        #endregion
+
     }
 }
