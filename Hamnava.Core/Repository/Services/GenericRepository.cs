@@ -1,5 +1,7 @@
-﻿using Data.Entities;
+﻿using Data.ApplicationContext;
+using Data.Entities;
 using Hamnava.Core.Repository.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,14 +12,19 @@ namespace Hamnava.Core.Repository.Services
 {
     public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity
     {
-        public Task<IReadOnlyList<T>> GetAllAsync()
+        private readonly Context _context;
+        public GenericRepository(Context context)
         {
-            throw new NotImplementedException();
+
+        }
+        public async Task<IReadOnlyList<T>> GetAllAsync()
+        {
+            return await _context.Set<T>().ToListAsync();
         }
 
-        public Task<T> GetEntityByIdAsync(int id)
+        public async Task<T> GetEntityByIdAsync(int id)
         {
-            throw new NotImplementedException();
+            return await _context.Set<T>().FindAsync(id);
         }
     }
 }

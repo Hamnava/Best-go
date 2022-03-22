@@ -11,36 +11,36 @@ namespace API.Controllers
     [ApiController]
     public class ProductController : ControllerBase
     {
-        private readonly IProductRepository _productRepository;
-        public ProductController(IProductRepository productRepository)
+        private readonly IUnitOfWork _context;
+        public ProductController(IUnitOfWork context)
         {
-            _productRepository = productRepository;
+            _context = context;
         }
 
         [HttpGet]
         public async Task<ActionResult<List<Product>>> GetProducts()
         {
-            var products = await _productRepository.GetAllProductAsync();
+            var products = await _context.productUW.GetAllAsync(null, null, "ProductType,ProductBrand");
             return Ok(products);
         }
 
         [HttpGet("{id}")]
         public async Task<ActionResult<Product>> GetProductById(int id)
         {
-            var product = await _productRepository.GetProductByIdAsync(id);
+            var product = await _context.productUW.GetAllAsync(x=> x.Id == id, null, "ProductType,ProductBrand");
             return Ok(product);
         }
 
         [HttpGet("brands")]
         public async Task<ActionResult<IReadOnlyList<ProductBrand>>> GetProductBrands()
         {
-            return Ok(await _productRepository.GetAllProductBrandsAsync());
+            return Ok(await _context.productBrandUW.GetAllAsync());
         }
 
         [HttpGet("types")]
         public async Task<ActionResult<IReadOnlyList<ProductType>>> GetProductTypes()
         {
-            return Ok(await _productRepository.GetAllProductTypesAsync());
+            return Ok(await _context.productTypeUW.GetAllAsync());
         }
     }
 }
