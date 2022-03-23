@@ -1,6 +1,7 @@
 
 using API.Middleware;
 using Data.ApplicationContext;
+using Hamnava.Core.Errors;
 using Hamnava.Core.PublicClasses;
 using Hamnava.Core.Repository.Interfaces;
 using Hamnava.Core.Repository.Services;
@@ -46,6 +47,24 @@ namespace API
 
             // for AutoMapper
             services.AddAutoMapper(typeof(AutoMapperProfile));
+
+            services.Configure<ApiBehaviorOptions>(options =>
+            {
+                options.InvalidModelStateResponseFactory = actionContext =>
+                {
+                    var errors = actionContext.ModelState
+                        .Where(e => e.Value.Errors.Count > 0)
+                        .SelectMany(x => x.Value.Errors)
+                        .Select(x => x.ErrorMessage).ToArray();
+
+                    var errorResponse = new ApiValidationErrorResponse
+                    {
+                        Errors = errors
+                    };
+
+                    return new BadRequestObjectResult(errorResponse);
+                };
+            });
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
