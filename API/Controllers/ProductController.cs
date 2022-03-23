@@ -9,9 +9,8 @@ using System.Threading.Tasks;
 
 namespace API.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class ProductController : ControllerBase
+   
+    public class ProductController : BaseApiController
     {
         private readonly IUnitOfWork _context;
         private readonly IMapper _mapper;
