@@ -34,4 +34,8 @@
     <ProjectReference Include="..\Hamnava.Core\Hamnava.Core.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
 </Project>
