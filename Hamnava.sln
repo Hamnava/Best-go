@@ -5,9 +5,9 @@ VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API", "API\API.csproj", "{A9C8A1C7-75C2-47A6-BA3C-15FE7314B722}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hamnava.Core", "Hamnava.Core\Hamnava.Core.csproj", "{F5BEDBF6-3FF2-457C-BB59-1F2F1E278809}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hamnava.Core", "Hamnava.Core\Hamnava.Core.csproj", "{F5BEDBF6-3FF2-457C-BB59-1F2F1E278809}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{83D67F20-41D3-4158-8132-19CEEED3F1CB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data", "Data\Data.csproj", "{83D67F20-41D3-4158-8132-19CEEED3F1CB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

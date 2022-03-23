@@ -1,5 +1,6 @@
 
 using Data.ApplicationContext;
+using Hamnava.Core.PublicClasses;
 using Hamnava.Core.Repository.Interfaces;
 using Hamnava.Core.Repository.Services;
 using Microsoft.AspNetCore.Builder;
@@ -42,6 +43,8 @@ namespace API
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped(typeof(IGenericRepository<>), (typeof(GenericRepository<>)));
 
+            // for AutoMapper
+            services.AddAutoMapper(typeof(AutoMapperProfile));
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
